@@ -18,6 +18,8 @@ Select an element, review both screenshots and submit. The app-connection creden
 
 The extension requires the Langboard OAuth server at `/mcp/oauth`, dynamic public-client registration, PKCE and `mcp:access`. Allow the exact installed extension origin and its Chrome identity redirect URL. The QA host operator configures the upstream identity provider callback separately.
 
+See the [Chrome deployment guide](docs/chrome-deployment.md) for release packaging, OAuth configuration, and Chrome Web Store publication.
+
 ## Catalog package
 
 `manifest.json` is a portable Langboard app package. `panel/assets/twizzer-cursor.svg` is the purple cursor app icon. The package contains no credentials, tenant identifiers, private URLs, or customer data.
