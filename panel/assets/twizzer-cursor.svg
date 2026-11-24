@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
-  <title id="title">Goldenbase cursor</title>
+  <title id="title">Twizzer cursor</title>
   <desc id="desc">Purple pointer cursor with a small gold target mark</desc>
   <defs>
     <linearGradient id="cursor" x1="22" y1="12" x2="96" y2="112" gradientUnits="userSpaceOnUse">
