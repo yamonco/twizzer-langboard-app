@@ -1,0 +1,10 @@
+{
+  "name": "twizzer-langboard-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:extension": "node scripts/build_extension.mjs"
+  },
+  "dependencies": {"@modelcontextprotocol/sdk": "1.26.0"},
+  "devDependencies": {"@tailwindcss/cli": "4.3.3", "tailwindcss": "4.3.3", "daisyui": "5.7.47", "esbuild": "0.27.3"}
+}

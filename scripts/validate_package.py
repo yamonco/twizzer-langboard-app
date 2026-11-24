@@ -3,6 +3,7 @@
 from __future__ import annotations
 import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,10 +25,12 @@ assert (ROOT / "panel/assets/twizzer-cursor.svg").read_text(encoding="utf-8").st
 secret_patterns = [
     re.compile(r"(?i)(client_secret|access_token|refresh_token|private_key|password)\s*[:=]"),
     re.compile(r"(?i)bearer\s+[A-Za-z0-9._-]{16,}"),
-    re.compile(r"https?://(?:10\\.|192\\.168\\.|172\\.(?:1[6-9]|2[0-9]|3[01])\\.)"),
+    re.compile(r"https?://(?:10\.|192\.168\.|172\.(?:1[6-9]|2[0-9]|3[01])\.)"),
 ]
-for path in ROOT.rglob("*"):
-    if not path.is_file() or ".git" in path.parts or path.suffix in {".pyc", ".zip"}:
+files = subprocess.check_output(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"], cwd=ROOT)
+for name in files.decode("utf-8").split("\0"):
+    path = ROOT / name
+    if not path.is_file():
         continue
     text = path.read_text(encoding="utf-8", errors="ignore")
     for pattern in secret_patterns:

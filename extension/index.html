@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Twizzer</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="composer.js"></script>
+</head>
+<body>
+<main class="mx-auto max-w-lg space-y-4 p-4">
+  <h1 class="text-xl font-semibold">Twizzer</h1>
+  <form id="connection" class="space-y-2">
+    <label for="server" class="label">Langboard API address</label>
+    <input id="server" class="input w-full" type="url" placeholder="https://board.example" required>
+    <button class="btn w-full">Sign in to Langboard</button>
+  </form>
+  <form id="feedback" class="space-y-3" hidden>
+    <label for="board" class="label">Board</label>
+    <select id="board" class="select w-full" required></select>
+    <label for="resource" class="label">Approved site resource ID</label>
+    <input id="resource" class="input w-full" pattern="[A-Za-z0-9]{11}" required>
+    <label for="credential" class="label">Twizzer connection credential</label>
+    <input id="credential" class="input w-full" type="password" autocomplete="off" maxlength="248" required>
+    <button id="pick" class="btn w-full" type="button">Select page element</button>
+    <output id="selection" class="block text-sm"></output>
+    <label for="title" class="label">Issue title</label>
+    <input id="title" class="input w-full" maxlength="200" required>
+    <label for="details" class="label">Details</label>
+    <textarea id="details" class="textarea w-full" maxlength="8000"></textarea>
+    <div id="previews" class="space-y-2"></div>
+    <button id="submit" class="btn btn-primary w-full" disabled>Create app card</button>
+  </form>
+  <p id="status" class="text-sm" role="status" aria-live="polite"></p>
+</main>
+</body>
+</html>

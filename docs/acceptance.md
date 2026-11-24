@@ -16,5 +16,5 @@ This repository is the public Twizzer package boundary. It is intentionally inde
 - A board administrator grants the declared capabilities and selects a `site` resource.
 - The MV3 extension completes native OAuth PKCE and board discovery through the selected Langboard host.
 - The extension's selected-element workflow calls the approved native card command.
-- Current-screen and full-page evidence require a separately approved Langboard attachment capability. The current SDK declaration set does not define `attachments.write`, so no attachment success is claimed by this release.
-- VM105 Chrome acceptance must prove one created card, duplicate-safe retry, expired-session recovery, and both evidence receipts after the host attachment contract exists.
+- Current-screen and full-page evidence use the signed-in user’s native attachment action with current card update permission. Verify both files open from the app-owned card.
+- VM105 Chrome acceptance must prove one created card, duplicate-safe retry, expired-session recovery, and both evidence receipts using the deployed host and its actual permissions.

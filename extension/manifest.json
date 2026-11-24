@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Twizzer",
+  "version": "0.1.0",
+  "description": "Select a page element and create a Langboard app card with screenshots.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "identity"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Twizzer"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQkDgca2E0Bp/ZoyHGuoYLmTBxtFV0Qts/XwaOEu5g6gt/TcZgmJozgzSswkMaEFXRzZ3IqXhTLwIWf7iAZCFLaQ18kl2JEAMltnq3yFo9kGzIiFDnJhFXWG6EzQemh4Fc8K1CVYEfsVr4XOojCczObvYaONA7Th20U8bHmb14s72Tb44gwb3obN55CtzVesmW9a2H9XQEje5NM8x97hq5C0p+y1EOWrh0LvNRZQcYDZg6NFTVtP5AKtVF/1ht1GYOlEAQyjPxURo9jTy4LvvWFEDsqIPLoDZMUjJzw2cCIiXIqA3+AgZiFEjZiYP5y2h4EdU0VffyLc8xdYIn898wIDAQAB",
+  "minimum_chrome_version": "116"
+}
