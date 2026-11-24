@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Twizzer cursor</title>
+  <desc id="desc">Purple pointer cursor with a small gold target mark</desc>
+  <defs>
+    <linearGradient id="cursor" x1="22" y1="12" x2="96" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a855f7"/><stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <path d="M18 8 25 99l25-21 17 35 14-7-17-35 33-3L18 8Z" fill="url(#cursor)" stroke="#f5d76e" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="90" cy="25" r="9" fill="#f5d76e"/>
+  <path d="M90 18v14M83 25h14" stroke="#4c1d95" stroke-width="3" stroke-linecap="round"/>
+</svg>
