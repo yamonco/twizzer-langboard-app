@@ -2,23 +2,43 @@
   "package_version": 1,
   "declaration": {
     "schema_version": 2,
-    "key": "goldenbase",
+    "key": "twizzer",
     "version": "0.1.0",
-    "name": "Goldenbase",
-    "description": "Turn feedback on a selected page element into a Goldenbase app card.",
-    "capabilities": ["cards.create", "cards.read", "resources.read", "attachments.write"],
-    "resource_types": ["site"],
-    "workflow_requirements": {"required": ["backlog"], "optional": []},
+    "name": "Twizzer",
+    "description": "Select a page element and create a Twizzer issue card in Langboard.",
+    "capabilities": [
+      "panels.render",
+      "cards.create",
+      "cards.read",
+      "resources.read"
+    ],
+    "resource_types": [
+      "site"
+    ],
+    "workflow_requirements": {
+      "required": [
+        "backlog"
+      ],
+      "optional": []
+    },
     "card_lifecycle": {
       "element_feedback": {
-        "archive": {"mode": "retain", "description": "Retain submitted feedback and evidence."},
+        "archive": {
+          "mode": "retain",
+          "description": "Retain submitted feedback and evidence."
+        },
         "restore": "retain_external_state"
       }
+    },
+    "panel": {
+      "url": "https://twizzer.app/panel",
+      "name": "Twizzer",
+      "icon": "cursor"
     }
   },
   "panel_entry": "panel/index.html",
   "store": {
-    "icon": "assets/goldenbase-cursor.svg",
-    "icon_dark": "assets/goldenbase-cursor.svg"
+    "icon": "panel/assets/twizzer-cursor.svg",
+    "icon_dark": "panel/assets/twizzer-cursor.svg"
   }
 }
