@@ -1,0 +1,24 @@
+{
+  "package_version": 1,
+  "declaration": {
+    "schema_version": 2,
+    "key": "goldenbase",
+    "version": "0.1.0",
+    "name": "Goldenbase",
+    "description": "Turn feedback on a selected page element into a Goldenbase app card.",
+    "capabilities": ["cards.create", "cards.read", "resources.read", "attachments.write"],
+    "resource_types": ["site"],
+    "workflow_requirements": {"required": ["backlog"], "optional": []},
+    "card_lifecycle": {
+      "element_feedback": {
+        "archive": {"mode": "retain", "description": "Retain submitted feedback and evidence."},
+        "restore": "retain_external_state"
+      }
+    }
+  },
+  "panel_entry": "panel/index.html",
+  "store": {
+    "icon": "assets/goldenbase-cursor.svg",
+    "icon_dark": "assets/goldenbase-cursor.svg"
+  }
+}
